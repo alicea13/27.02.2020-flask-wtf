@@ -20,7 +20,7 @@ def login():
     form = LoginForm()
     if form.validate_on_submit():
         return redirect('/success')
-    return render_template('index.html', title='Авторизация', form=form)
+    return render_template('login.html', title='Авторизация', form=form)
 
 
 if __name__ == "__main__":
