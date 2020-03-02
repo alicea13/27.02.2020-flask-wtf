@@ -8,7 +8,12 @@ app = Flask(__name__)
 def prof(prof):
     if 'строитель' in prof or 'инженер' in prof:
         head_1 = 'Инженерные тренажеры'
-        return render_template("base.html", title=head_1)
+        trace = "static/img/ing.png"
+        return render_template("base.html", title=head_1, picture_name=trace)
+    else:
+        head_2 = "Научнык стимуляторы"
+        trace = "static/img/sci.png"
+        return render_template("base.html", title=head_2, picture_name=trace)
     
 
 
